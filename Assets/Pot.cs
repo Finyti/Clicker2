@@ -4,6 +4,12 @@ public class Pot : MonoBehaviour
 {
 	public float shrinkSpeed;
 	public Vector3 rotateSpeed;
+	AudioSource source;
+
+	void Start()
+	{
+		source = GetComponent<AudioSource>();
+	}
 
 	void Update()
 	{
@@ -17,5 +23,6 @@ public class Pot : MonoBehaviour
 	void OnMouseDown()
 	{
 		transform.localScale = Vector3.one * 1.3f;
+		source.PlayOneShot(source.clip);
 	}
 }
