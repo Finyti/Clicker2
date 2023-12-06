@@ -24,5 +24,6 @@ public class Pot : MonoBehaviour
 	{
 		transform.localScale = Vector3.one * 1.3f;
 		source.PlayOneShot(source.clip);
+		GameManager.clicks++;
 	}
 }
